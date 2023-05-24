@@ -1,0 +1,253 @@
+/*
+Purpose: This file contains the main styles for the website's layout and typography.
+Project: Kirito website
+Author: Vuong Khang Minh,Nghiem Tuan Linh, Nguyen Cuong Nhat, Dang Nguyen Duc Anh, Phan Huy Quang 
+Last Updated: 2023-4-7
+*/
+
+/* begin reset css */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}
+/* end reset css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.back1:hover {
+    text-decoration: none;
+    font-style: italic;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: white;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: whitesmoke;
+}
+
+body {
+    background: url('./images/background.jpg') no-repeat center center fixed;
+	background-size: cover;
+    background-color: #1a1a1a;
+	background-blend-mode: multiply;
+    /* max-width: 3840px;
+    max-height: 2160px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+/* header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 64px;
+	background-color: red;
+} */
+
+.intro {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
+.intro > h1 {
+    color: white;
+    font-size: 64px;
+    text-transform: uppercase;
+    line-height: 1.1;
+    font-family: sans-serif;
+}
+
+.intro > p {
+    color: white;
+    font-size: 24px;
+    font-family: sans-serif;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    padding-top: 32px;
+    color: white;
+}
+
+header > a {
+    position: relative;
+    left: 64px;
+    color: white;
+    font-size: 24px;
+    font-family: sans-serif;
+}
+
+.page {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+    padding-left: 64px;
+    padding-right: 64px;
+    color: white;
+    font-family: sans-serif;
+}
+
+.page > h2 {
+    color: white;
+    font-size: 48px;
+    line-height: 1.1;
+    font-family: sans-serif;
+}
+
+.page > p {
+    color: white;
+    font-size: 16px;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+.page > p {
+    margin-top: -24px;
+}
+
+.page > p:nth-child(2) {
+    margin-top: 0;
+}
+
+.page_tldr {
+    font-weight: 700;
+}
+
+hr {
+    height: 1px;
+    background-color: white;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.code {
+    position: relative;
+    max-height: 500px;
+    width: 100%;
+    max-width: 1280px;
+    border: 1px solid white;
+    font-family: monospace;
+    color: white;
+    font-size: 16px;
+    padding: 16px;
+    overflow-y: auto;
+    margin-bottom: 16px;
+}
+
+.code > .line {
+    position: relative;
+    height: 18px;
+    width: calc(100% - 52px);
+    display: flex;
+    align-items: center;
+    counter-increment: code_line;
+    margin-left: 52px;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    transition: opacity 0.3s cubic-bezier(0,0,0,1);
+}
+
+.code > .line::before {
+    content: counter(code_line);
+    /* margin-right: 16px; */
+    position: absolute;
+    left: -40px;
+}
+
+.line > .space_line_right {
+    margin-right: 8px;
+}
+
+.line > .space_line_left {
+    margin-left: 8px;
+}
+
+.function {
+    color: #56a6d0;
+}
+
+.str {
+    color: #98be85;
+}
+
+.operator {
+    color: #6ca1b9;
+}
+
+.var {
+    color: #6e9ac1;
+}
+
+.num {
+    color: #b489aa;
+}
+
+.highlight:hover {
+    background-color: rgba(46, 52, 64, 0.5);
+}
+
+.code:hover > .line:not(.highlight) {
+    opacity: 0.5;
+}
+
+.small_text {
+    font-size: 12px !important;
+    font-style: italic;
+}
+
+strong {
+    font-weight: 700;
+    font-style: italic;
+}
+
+.go_back_enhancement {
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+    color: white;
+}
+
+.go_back_enhancement:hover {
+    color: whitesmoke;
+    font-style: italic;
+    text-decoration: none;
+}

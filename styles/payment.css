@@ -1,0 +1,249 @@
+#input_card_radio {
+    top: 10%;
+    /* height: 300px; */
+    width: 100%;
+    display: flex;
+	/* flex-direction: column; */
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+
+.text_holder::before, *.text_holder::after {
+	transition: .5s cubic-bezier(1,0,0,1) !important
+}
+
+@media screen and (max-width: 1296px) {
+    #enquiry_form_states {
+		float: left;
+	}
+}
+
+@media screen and (max-width: 1255px) {
+    #enquiry_form_categories select {
+		width: auto;
+		max-width: 100px;
+	}
+}
+
+@media screen and (max-width: 1020px) {
+    #enquiry_form_categories label {
+		padding-left: 5px;
+		padding-right: 0;
+		white-space: nowrap;
+		width: 30%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+
+textarea#comment {
+	width:90%;
+	background-color: #27282c;
+	color: white;
+	box-sizing: border-box;
+	border: 5px solid white;
+	padding: 5px;
+	outline: none;
+}
+
+textarea#comment::placeholder {
+	font-size: 16px;
+}
+
+.enquiry_form_submit {
+	transform: translateY(-46px);
+}
+
+.enquiry_form_submit > input {
+	width: calc(65px / 6 * 16);
+	border-radius: 100px;
+	transition: all .3s cubic-bezier(0,0,0,1),
+				width .3s cubic-bezier(0,1,0,1);
+}
+
+.enquiry_form_submit > input:hover {
+	box-shadow: 0 0 0 2px #ffffff;
+	background-color: transparent;
+	color: white;
+}
+
+.enquiry_form_submit > input:active {
+	width: calc(65px / 6 * 16 + 32px);
+}
+
+#card_in4 > input {
+	background: #27282c;
+	width: calc(100% - 32px);
+	color: white;
+	height: 30px;
+	font-size: 16px;
+	border: 5px solid white;
+	outline: none;
+}
+
+.radio label:before, .radio input:checked + label:before {
+	min-width: 10px;
+	min-height: 10px;
+}
+
+.pay_img {
+	width: calc(100% - 32px);
+	/* position: relative; */
+}
+
+.pay_btn {
+	display: none;
+}
+
+.radio_card_container {
+    display: flex;
+    width: 100%;
+    position: relative;
+	margin-bottom: 20px;
+	align-items: center;
+	justify-content: center;
+}
+
+.radio_label_card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.overform {
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+.radio_label_card {
+	position: relative;
+	width: auto;
+}
+
+.radio_label_card::before {
+	position: absolute;
+	content: '';
+	bottom: -8px;
+	right: 32px;
+	width: 0;
+	height: 4px;
+	background: whitesmoke;
+	background-size: 200%;
+}
+
+.radio_label_card::after {
+	position: absolute;
+	content: '';
+	bottom: -8px;
+	left: 32px;
+	width: 0;
+	height: 4px;
+	background: whitesmoke;
+	transition: width .25s cubic-bezier(1,0,0,1);
+}
+
+.pay_btn {
+	display: none;
+}
+
+.pay_btn:checked + .radio_label_card::before {
+	width: calc(100% - 64px);
+	transition: width .25s cubic-bezier(1,0,0,1);
+}
+
+.pay_btn:checked + .radio_label_card::after {
+	width: calc(100% - 64px);
+	transition: width 0s cubic-bezier(1,0,0,1);
+	transition-delay: 250ms;
+}
+
+.footer_class {
+	position: relative;
+	width: 100%;
+	height: 240px;
+}
+
+footer {
+	border-top: 1px solid white;
+	display: flex;
+	padding: 16px;
+	font-family: sans-serif;
+}
+
+footer > .col {
+	position: relative;
+	height: 100%;
+	width: calc(100% / 4);
+	display: flex;
+	flex-direction: column;
+	color: white;
+}
+
+footer > .col > .headr {
+	position: relative;
+	width: 100%;
+	height: 48px;
+	font-size: 32px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	padding: 8px;
+}
+
+footer > .col > .body {
+	position: relative;
+	width: 100%;
+	height: calc(100% - 48px);
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	overflow: hidden;
+	padding: 8px;
+	line-height: 1.2;
+}
+
+footer > .col > .body > p {
+	margin: 2px;
+}
+
+footer > .col > .body > a {
+	text-decoration: none;
+	color: white;
+}
+
+footer > .col > .body > a:hover {
+	text-decoration: underline;
+}
+
+.bodyform > input {
+	margin: 8px;
+}
+
+/* input not type submit */
+.bodyform > input:not([type="submit"]) {
+	position: relative;
+	width: calc(100% - 64px);
+	height: 32px;
+	border: 1px solid white;
+	border-radius: 0;
+	padding: 8px;
+	background: #1a1a1a;
+	color: white;
+}
+
+.bodyform > input[type="submit"] {
+	position: relative;
+	height: 32px;
+	border: 1px solid white;
+	border-radius: 0;
+	padding: 8px;
+	color: white;
+	background-color: #1a1a1a;
+	transition: background .3s cubic-bezier(0,0,0,1), color .3s cubic-bezier(0,0,0,1);
+}
+
+.bodyform > input[type="submit"]:hover {
+	background-color: white;
+	color: #1a1a1a;
+}

@@ -1,0 +1,204 @@
+/*
+Purpose: This file contains the main styles for the website's layout and typography.
+Project: Kirito website
+Author: Vuong Khang Minh,Nghiem Tuan Linh, Nguyen Cuong Nhat, Dang Nguyen Duc Anh, Phan Huy Quang 
+Last Updated: 2023-4-7
+*/
+
+/* begin reset css */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}
+/* end reset css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+	background: url('./images/background.jpg') no-repeat center center fixed;
+	background-size: cover;
+    background-color: #1a1a1a;
+	background-blend-mode: multiply;
+    max-width: 3840px;
+    max-height: 2160px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero_div {
+    position: relative;
+	margin: 24px;
+    width: 600px;
+    height: 100px;
+    /* background-color: rgb(43, 43, 43); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	z-index: 99;
+}
+
+.hero_div > .hero_text {
+    color: white;
+    font-family: sans-serif;
+	font-size: 80px;
+	/* todo: light font weight */
+}
+
+.hero_div > .hero_text_part2 {
+    color: white;
+    margin-left: 16px;
+	margin-top: -20px;
+	font-family: sans-serif;
+	font-size: 24px;
+}
+
+section {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.list_enhance {
+	transition: .25s cubic-bezier(0,0,0,1);
+	color: white;
+	border-radius: 6px;
+}
+
+.list_enhance1 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 25%;
+	height: 25%;
+	z-index: 4;
+	border: 1px solid white;
+}
+
+.list_enhance2 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 50%;
+	height: 50%;
+	z-index: 3;
+	border: 1px solid white;
+}
+
+.list_enhance3 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 75%;
+	height: 75%;
+	z-index: 2;
+	border: 1px solid white;
+}
+
+.list_enhance4 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: calc(100% - 4px);
+	height: calc(100% - 4px);
+	z-index: 1;
+	border: 1px solid white;
+}
+
+section:hover > * {
+	filter: blur(25px);
+	border: none;
+}
+
+section:hover > .list_enhance:hover {
+	filter: blur(0px);
+	border: 1px solid white;
+}
+
+.open_menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+}
+
+.click_menu {
+	display: none;
+}
+
+.list_enhance > h1 {
+	position: absolute;
+	writing-mode: vertical-rl;
+	right: 0;
+	margin: 16px;
+	font-family: sans-serif;
+}
+
+.list_enhance > h1::before {
+	position: absolute;
+	content: "";
+	top: calc(100% + 8px);
+	left: calc(50% - 1px);
+	height: 0px;
+	width: 2px;
+	background-color: white;
+	transition: height .25s .3s cubic-bezier(0,1,0,1);
+}
+
+.list_enhance:hover > h1::before {
+	height: 100px;
+}
+
+footer {
+	position: fixed;
+	bottom: 16px;
+	right: 16px;
+	height: 64px;
+	width: 64px;
+	z-index: 99;
+	border-radius: 6px;
+	border: 1px solid white;
+	transition: .3s cubic-bezier(1,0,0,1);
+}
+
+footer > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 6px;
+}
+
+footer > a > div {
+	height: 1px;
+	width: 21px;
+	background-color: white;
+}
+
+footer:hover {
+	transform: scale(1.1);
+}
+
+footer:active {
+	transform: scale(0.9);
+	transition: .3s cubic-bezier(0,1,0,1);
+}

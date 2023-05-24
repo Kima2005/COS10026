@@ -1,0 +1,71 @@
+/*
+Purpose: This file contains the main styles for the website's layout and typography.
+Project: Kirito website
+Author: Vuong Khang Minh,Nghiem Tuan Linh, Nguyen Cuong Nhat, Dang Nguyen Duc Anh, Phan Huy Quang 
+Last Updated: 2023-4-7
+*/
+form {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 64px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: white;
+	border: 2px solid white;
+	box-sizing: border-box;
+	width: 400px;
+	padding: 32px;
+	transition: .3s cubic-bezier(1,0,0,1);
+}
+
+form > input {
+	height: 24px;
+	margin-top: -16px;
+	background-color: rgba(30, 30, 30, 0.5);
+	color: white;
+	border-radius: 4px;
+}
+
+.sign {
+	position: absolute;
+	left: 50%;
+	margin-top: 32px;
+	color: white;
+	padding: 8px 16px;
+	transform: translateX(-50%);
+	border-radius: 8px;
+	transition: .3s cubic-bezier(1,0,0,1), background-color .5s cubic-bezier(0,0,0,1);
+}
+
+.sign:hover {
+	background-color: white;
+	color: #1e1e1e;
+	text-decoration: none;
+	border-radius: 100px;
+}
+
+form:hover {
+	background-color: rgba(30, 30, 30, 0.4);
+	-webkit-backdrop-filter: blur(25px);
+	backdrop-filter: blur(25px);
+	border-radius: 16px;
+}
+
+#signupbtn {
+	transition: .3s cubic-bezier(0,1,0,1);
+}
+
+#signupbtn:hover {
+	background-color: white;
+	color: #1e1e1e;
+}
+
+#signupbtn:active {
+	filter: brightness(0.8);
+}
+
+.second_gateway {
+	margin-top: 16px;
+}

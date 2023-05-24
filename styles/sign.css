@@ -1,0 +1,132 @@
+
+/*
+Purpose: This file contains the main styles for the website's layout and typography.
+Project: Kirito website
+Author: Vuong Khang Minh,Nghiem Tuan Linh, Nguyen Cuong Nhat, Dang Nguyen Duc Anh, Phan Huy Quang 
+Last Updated: 2023-4-7
+*/
+
+/* #sign > form > * {
+    color: white;
+}
+
+#signupbtn {
+    color: black !important;
+} */
+
+footer {
+	border-top: 1px solid white;
+	display: flex;
+	padding: 16px;
+	font-family: sans-serif;
+}
+
+.footer_class {
+	/* margin-top: 100vh; */
+	position: fixed;
+	/* top: 20%; */
+	bottom: 0;
+	left: 0;
+	height: 240px;
+	width: 100%;
+	-webkit-backdrop-filter: blur(50px);
+	backdrop-filter: blur(50px);
+	z-index: 999;
+}
+
+@media screen and (max-height: 884px) {
+	.footer_class {
+		height: 120px;
+	}
+}
+
+@media screen and (max-height: 760px) {
+	.footer_class {
+		display: none;
+	}
+}
+
+footer > .col {
+	position: relative;
+	height: 100%;
+	width: calc(100% / 4);
+	display: flex;
+	flex-direction: column;
+	color: white;
+}
+
+footer > .col > .headr {
+	position: relative;
+	width: 100%;
+	height: 48px;
+	font-size: 32px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	padding: 8px;
+}
+
+footer > .col > .body {
+	position: relative;
+	width: 100%;
+	height: calc(100% - 48px);
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	overflow: hidden;
+	padding: 8px;
+	line-height: 1.2;
+}
+
+footer > .col > .body:hover {
+	overflow-y: auto;
+}
+
+footer > .col > .body > p {
+	margin: 2px;
+}
+
+footer > .col > .body > a {
+	text-decoration: none;
+	color: white;
+}
+
+footer > .col > .body > a:hover {
+	text-decoration: underline;
+}
+
+.bodyform, .bodyform:hover {
+	all: unset;
+}
+
+.bodyform > input {
+	margin: 8px;
+}
+
+/* input not type submit */
+.bodyform > input:not([type="submit"]) {
+	position: relative;
+	width: calc(100% - 64px);
+	height: 32px;
+	border: 1px solid white;
+	border-radius: 0;
+	padding: 8px;
+	background: #1a1a1a;
+	color: white;
+}
+
+.bodyform > input[type="submit"] {
+	position: relative;
+	height: 32px;
+	border: 1px solid white;
+	border-radius: 0;
+	padding: 8px;
+	color: white;
+	background-color: #1a1a1a;
+	transition: background .3s cubic-bezier(0,0,0,1), color .3s cubic-bezier(0,0,0,1);
+}
+
+.bodyform > input[type="submit"]:hover {
+	background-color: white;
+	color: #1a1a1a;
+}

@@ -1,0 +1,235 @@
+/*
+Purpose: This file contains the main styles for the website's layout and typography.
+Project: Kirito website
+Author: Vuong Khang Minh,Nghiem Tuan Linh, Nguyen Cuong Nhat, Dang Nguyen Duc Anh, Phan Huy Quang 
+Last Updated: 2023-4-7
+*/
+
+input[type="reset"],
+input[type="password"] {
+  width: 100%;
+  padding: 1vw 1vw;
+  margin: 0.5vw 0;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  background-color: #161e27;
+  color: #f9f9f9;
+  font-size: 1.5vw;
+}
+
+input[type="submit"] {
+  color: #1f2b37;
+  width: 30%;
+  padding: 1vw 1vw;
+  margin: 0.5vw 0;
+  display: inline-block;
+  border: none;
+  border-radius: 10px;
+  background-color: #161e27;
+  color: #f9f9f9;
+  font-size: 1.5vw;
+  transform: translateX(-50%);
+  position: relative;
+  left: 50%;
+  transition: 0.3s;
+}
+
+input[type="text"] {
+  width: 50%;
+  padding: 1vw 1vw;
+  margin: 0.5vw 0;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  background-color: #161e27;
+  color: #f9f9f9;
+  font-size: 1.5vw;
+  transform: translateX(-50%);
+  position: relative;
+  left: 50%;
+}
+
+select {
+  padding: 1vw 1vw;
+  margin: 0.5vw 0;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  background-color: #161e27;
+  color: #f9f9f9;
+  font-size: 1.5vw;
+  transform: translateX(-50%);
+  position: relative;
+  left: 50%;
+}
+
+select:hover {
+  background-color: #131a21;
+}
+
+input[type="submit"]:hover {
+  background-color: #6bda91;
+}
+
+.manager_body form {
+  border: 3px solid white;
+  font-family: sans-serif;
+}
+.manager_body form label {
+  font-size: 2vw;
+  /* position: relative; */
+  text-align: center;
+}
+
+/* log out */
+#tobyebye {
+	float: right;
+	margin-right: 32px;
+	margin-bottom: 64px;
+	color: white;
+	font-family: cursive;
+	font-size: 32px;
+}
+
+#tobyebye:hover {
+	text-decoration: none;
+	animation: rotatebrr .5s infinite linear;
+}
+
+@keyframes rotatebrr {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.info_update, .warning_delete {
+  text-decoration: none;
+}
+
+.info_update:hover, .warning_delete:hover {
+  filter: brightness(0.8);
+}
+
+.info_update {
+  color: rgb(112, 216, 112)
+}
+
+.warning_delete {
+  color: rgb(255, 87, 87);
+}
+
+.customer_name {
+  position: absolute;
+  writing-mode: vertical-lr;
+  margin-top: 24px;
+  margin-left: 8px;
+  transform: rotate(180deg);
+}
+
+.mana_form {
+  margin-bottom: 32px;
+  box-sizing: border-box;
+  padding-top: 16px;
+  padding-bottom: 32px;
+}
+
+.footer_class {
+	position: relative;
+	width: 100%;
+	height: 240px;
+}
+
+footer {
+  margin-top: 32px;
+	border-top: 1px solid white;
+	display: flex;
+	padding: 16px;
+	font-family: sans-serif;
+}
+
+footer > .col {
+	position: relative;
+	height: 100%;
+	width: calc(100% / 4);
+	display: flex;
+	flex-direction: column;
+	color: white;
+}
+
+footer > .col > .headr {
+	position: relative;
+	width: 100%;
+	height: 48px;
+	font-size: 32px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	padding: 8px;
+}
+
+footer > .col > .body {
+	position: relative;
+	width: 100%;
+	height: calc(100% - 48px);
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	overflow: hidden;
+	padding: 8px;
+	line-height: 1.2;
+}
+
+footer > .col > .body > p {
+	margin: 2px;
+}
+
+footer > .col > .body > a {
+	text-decoration: none;
+	color: white;
+}
+
+footer > .col > .body > a:hover {
+	text-decoration: underline;
+}
+
+.bodyform {
+  border: none !important;
+  all: unset;
+}
+
+.bodyform > input {
+  all: unset;
+	margin: 8px;
+}
+
+/* input not type submit */
+.bodyform > input:not([type="submit"]) {
+	position: relative;
+	width: calc(100% - 64px);
+	height: 32px;
+	border: 1px solid white;
+	border-radius: 0;
+	padding: 8px;
+	background: #1a1a1a;
+	color: white;
+}
+
+.bodyform > input[type="submit"] {
+	position: relative;
+	height: 32px;
+	border: 1px solid white;
+	border-radius: 0;
+	padding: 8px;
+	color: white;
+	background-color: #1a1a1a;
+	transition: background .3s cubic-bezier(0,0,0,1), color .3s cubic-bezier(0,0,0,1);
+}
+
+.bodyform > input[type="submit"]:hover {
+	background-color: white;
+	color: #1a1a1a;
+}
