@@ -1,1 +1,4 @@
-# COS10026_WEB_GAME_2
+# COS10026 - ASSIGNMENT2
+# Contact me if you need help:
+- Gmail: khangminhvuong@gmail.com
+- Facebook: https://www.facebook.com/khangminhvuong2005/
